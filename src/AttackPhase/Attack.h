@@ -6,7 +6,7 @@
 
 class Attack {
 public:
-    void Start();
+    void Start(std::string filepath);
 };
 
 

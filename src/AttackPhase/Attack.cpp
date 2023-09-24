@@ -1,6 +1,6 @@
 #include "Attack.h"
 
 
-void Attack::Start() {
-    std::cout << "Attack launched" << std::endl;
+void Attack::Start(std::string filepath) {
+    std::cout << "Attack launched on " << filepath << std::endl;
 }

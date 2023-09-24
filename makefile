@@ -8,6 +8,9 @@ CXXFLAGS := -std=c++17
 #SDL2_INCLUDE := -I /usr/local/Cellar/sdl2/2.28.2/include/SDL2
 #SDL2_LIB := -L /usr/local/lib -lSDL2
 
+# Libreries linker
+SSL_LIB := -lssl -lcrypto
+
 # Source files
 SRC_DIR := src
 SRCS := $(wildcard $(SRC_DIR)/*/*.cpp)
@@ -25,7 +28,7 @@ all: $(EXEC)
 
 # Linking
 $(EXEC): $(OBJS)
-	$(CXX) $(CXXFLAGS) -o $@ $^ $(SDL2_LIB)
+	$(CXX) $(CXXFLAGS) -o $@ $^ $(SDL2_LIB) $(SSL_LIB)
 
 # Compilation
 $(OBJ_DIR)/%.o: $(SRC_DIR)/%.cpp

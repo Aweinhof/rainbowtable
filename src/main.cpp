@@ -53,7 +53,7 @@ int main(int argc, char* argv[]) {
 
         case ActionType::ATTACK:
             std::cout << "Executing attack on file : " << argv[2] << std::endl;
-            attack.Start();
+            attack.Start(argv[2]);
             break;
 
         case ActionType::ATTACK_NO_FILE:
