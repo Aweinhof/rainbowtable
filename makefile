@@ -18,7 +18,7 @@ OBJ_DIR := obj
 OBJS := $(patsubst $(SRC_DIR)/%.cpp,$(OBJ_DIR)/%.o,$(SRCS))
 
 # Executable name
-EXEC := rainbowtables
+EXEC := rainbowtable
 
 # Make all
 all: $(EXEC)
